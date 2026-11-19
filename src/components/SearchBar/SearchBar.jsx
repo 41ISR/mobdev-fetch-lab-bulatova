@@ -1,11 +1,9 @@
 import './SearchBar.css';
 
-function SearchBar({ query, setQuery }) {
-   const handleSubmit = (e) => {
-        e.preventDefault()
-   }
+function SearchBar({ query, setQuery, onSubmit }) {
+
   return (
-    <form className="search-bar" onSubmit={handleSubmit}>
+    <form className="search-bar" onSubmit={onSubmit}>
       <span className="search-bar__eyebrow">Найти фильм или сериал</span>
       <div className="search-bar__row">
         <input
